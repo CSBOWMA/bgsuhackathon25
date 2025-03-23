@@ -117,7 +117,7 @@ function About() {
     return (
         <div className = "about-details">
             <h2>About</h2>
-            <p>Come join us April 5th for BGSU Biggeset Hackathon yet. </p>
+            <p>Come join us April 5th for BGSU's Biggest Hackathon yet. </p>
         </div>
     );
 }
