@@ -186,9 +186,7 @@ a:focus {
     margin: 0px;
     width: 100%;
     padding: 4vw;
-    padding-top: 8vh
-    ;
-   
+    padding-top: 8vh; 
 }
 
 
@@ -208,10 +206,8 @@ a:focus {
     display: flex;
     flex-direction: column;
     width: 40%;
-    min-width: 40vw;
+    min-width: 35vw;
     height: 40%;
-
-
 }
 
 .about-details h2 {
@@ -236,7 +232,7 @@ a:focus {
     gap: 4vw;
     justify-content: center;
     align-items: center;
-    width: 60vw;
+    width: 50vw;
     
 }
 
@@ -394,7 +390,7 @@ a:focus {
 
 .question {
     position: relative;
-    font-size: 2vw;
+    font-size: clamp(15px, 300px, 2vw);
     font-weight: bold;
     align-self: flex-start;
     cursor: pointer;
@@ -417,7 +413,7 @@ a:focus {
     text-indent: 2vw;
     align-self: flex-start;
     text-align: left;
-    font-size: 1.5vw;
+    font-size: clamp(10px, 300px, 1.5vw);
     width: 60%;
 }
 

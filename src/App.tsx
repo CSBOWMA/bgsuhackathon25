@@ -203,7 +203,7 @@ function Tracks() {
         <div className = "tracks">
             <Track name = "AI/ML" img = {AILogo}/>
             <Track name = "Sustainability" img = {SustainLogo}/>
-            <Track name = "health" img = {HealthLogo}/>
+            <Track name = "Health" img = {HealthLogo}/>
         </div>
     );
 }
