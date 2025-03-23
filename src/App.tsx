@@ -10,7 +10,7 @@ function NavBar() {
       <nav className = "navbar">
             <ul className  = "navbar-menu">
             <NavElement title = "BGSU" target = "_blank" link = "https://www.bgsu.edu/" />
-            <NavElement title = "Sign-Up" target = "_blank" link = "https://forms.office.com/r/sUpuPjFvrS" />
+            <NavElement title = "Sign-Up" target = "_blank" link = "https://forms.office.com/r/A5c6H9YShw" />
             <NavElement title = "About" link = "#about" target = "_self" />
             <NavElement title = "Tracks" link = "#tracks" target = "_self" />
             <NavElement title = "FAQ" link = "#faq" target = "_self" />
@@ -117,7 +117,7 @@ function About() {
     return (
         <div className = "about-details">
             <h2>About</h2>
-            <p>Come join us April 5th for BGSU's Biggest Hackathon yet. </p>
+            <p>Come join us April 5th for BGSU's first Hackathon. </p>
         </div>
     );
 }
@@ -127,7 +127,7 @@ function AboutNumbers() {
         <div className = "about-numbers">
             <AboutNumber value = "24" name = "Hours" />
             <AboutNumber value = "30" name = "Hackers" />
-            <AboutNumber value = "1" name = "Universities" />
+            <AboutNumber value = "3" name = "Universities" />
             <AboutNumber value = "10" name = "Projects" />
             <AboutNumber value = "$300" name = "Prizes" /> 
         </div>
@@ -278,19 +278,20 @@ function FAQs() {
     return (
         <div className = "faqs">
             <FAQ question = "Who can sign up?" 
-                answer = "We are currently accepting university students from the Northwest region of Ohio. If you fit the criteria feel free to sign up!" />
+                answer = "We are currently accepting university students from Northwest Ohio. If you fit the criteria feel free to sign up!" />
             <div className = "faqs-item" onClick = {handleClick}> 
                 <div className = "question">How do I sign up?</div>
                 {isVisible ?
                 <div className = "answer">
                     If you are interested in participating
                     in this year's hackathon please fill out 
-                    this <a href = "link" target = "_blank">interest form</a>.
+                    this <a href = "https://forms.office.com/r/A5c6H9YShw" target = "_blank">interest form</a>.
                 </div> : null }
             </div>
             <FAQ question = "What is a hackathon?" answer = "A hackathon is an event in which you get the oppurtunity to bring your ideas to life. At the BGSU Hackathon you have 24 hours to design and create your idea utilizing either one or a combination of tracks that are designed to empower you." />
             <FAQ question = "Where is the event being held?" answer = "Starting at 10 am April 25th, The event is being held on BGSU's campus in Hayes Hall." />
             <FAQ question = "Are beginners allowed?" answer = "We encourage beginners to join, and even have rewards for beginners. If you are a hackathon veteran or this is your first one, this event will have something for you." />
+            <FAQ question = "Is sleeping provided?" answer = "Sleeping arrangements will not be provided for the participants, individuals will be expected to leave the venue if they want to sleep." />
         </div>
     );
 }
@@ -309,7 +310,6 @@ const FAQ: React.FC<FAQProps> = ({question, answer}) => {
     };
 
     return (
-
         <div className = "faqs-item" onClick = {handleClick}>
             <div className = "question">{question}</div>
             {isVisible ? 
