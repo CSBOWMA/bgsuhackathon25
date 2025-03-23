@@ -80,7 +80,7 @@ section {
     background-color: transparent;
 }
 
-.navelement a::after {
+a::after {
 
     content: "";
     display: inline-block;
@@ -94,7 +94,7 @@ section {
     transition: width 0.2s ease-out;
 }
 
-.navelement a:hover::after {
+a:hover::after {
 
     content: "";
     width: 100%;
@@ -102,20 +102,18 @@ section {
     bottom: 0;
     left: 0;
 }
-
-
-
-.navelement a {
+ 
+a {
     color: var(--main-color);
     align-self: center;
     position: relative;
 }
 
-.navelement a:visited {
+a:visited {
     color: var(--main-color);
 }
 
-.navelement a:focus {
+a:focus {
   outline: none;
   color: none;
 }
@@ -187,7 +185,9 @@ section {
     flex-direction: row;
     margin: 0px;
     width: 100%;
-    padding: 2vw;
+    padding: 4vw;
+    padding-top: 8vh
+    ;
    
 }
 
@@ -331,7 +331,7 @@ section {
 
 
 .tracks {
-    gap: 4vw;
+    gap: 8vw;
     justify-content: center;
     display: flex;
     flex-direction: row;
@@ -349,7 +349,7 @@ section {
 
 .track img {
     align-self: center;
-    width: 200px;
+    width: clamp(100px, 300px, 40vmin);
 }
 
 
@@ -381,11 +381,12 @@ section {
 .faqs {
     display: flex;
     flex-direction: column;
+    padding-bottom: 4vmin;
 }
 
 .faqs-item {
-    margin-left: 24vw;
-    margin-bottom: 0px;
+    margin-left: 18vw;
+    margin-bottom: 1.2vw;
     align-self: flex-start;
     display: flex;
     flex-direction: column;
@@ -393,7 +394,7 @@ section {
 
 .question {
     position: relative;
-    font-size: 2vmin;
+    font-size: 2vw;
     font-weight: bold;
     align-self: flex-start;
 }
@@ -401,18 +402,29 @@ section {
 .question::after {
     content: "";
     display: inline-block;
-    background: var(--secondary-color); /* Adjust to your color */
-    height: 1.5vmin;
-    border-radius: 1.5vmin;
+    background: var(--secondary-color);
+    height: 1vw;
+    border-radius: 1.5vw;
 
-    width: 1.5vmin; /* Initially set the width to 0 */
+    width: 1vw; /* Initially set the width to 0 */
     position: absolute;
-    bottom: .5vmin;
-    left: -2vmin; /* Start from the middle */
+    bottom: .8vw;
+    left: -1.2vw; /* Start from the middle */
 }
 
 .answer {
-
+    text-indent: 2vw;
     align-self: flex-start;
-    font-size: 1.5vmin;
+    text-align: left;
+    font-size: 1.5vw;
+    width: 60%;
+    
+}
+
+.answer a {
+    color: var(--secondary-color);
+}
+
+.answer a::after {
+    background: var(--secondary-color);
 }

@@ -9,7 +9,8 @@ function NavBar() {
     return (
       <nav className = "navbar">
             <ul className  = "navbar-menu">
-            <NavElement title = "BGSU" target = "_blank" link = "https://www.bgsu.edu/" /> 
+            <NavElement title = "BGSU" target = "_blank" link = "https://www.bgsu.edu/" />
+            <NavElement title = "Sign-Up" target = "_blank" link = "https://forms.office.com/r/sUpuPjFvrS" />
             <NavElement title = "About" link = "#about" target = "_self" />
             <NavElement title = "Tracks" link = "#tracks" target = "_self" />
             <NavElement title = "FAQ" link = "#faq" target = "_self" />
@@ -272,24 +273,44 @@ function FAQs() {
     return (
         <div className = "faqs">
             <div className = "faqs-item">
-                <div className = "question">Who can sign up?</div>
-                <div className = "answer">yes</div>
+            <div className = "question">Who can sign up?</div>
+                <div className = "answer">
+                    We are currently accepting university students 
+                    from the Northwest region of Ohio. If you fit the 
+                    criteria feel free to sign up!
+                </div>
             </div>
             <div className = "faqs-item"> 
-                <div className = "question">How do I sign up?</div>
-                <div className = "answer">yes</div>
+            <div className = "question">How do I sign up?</div>
+                <div className = "answer">
+                    If you are interested in participating
+                    in this year's hackathon please fill out 
+                    this <a href = "link" target = "_blank">interest form</a>.
+                </div>
             </div>
             <div className = "faqs-item"> 
-                <div className = "question">What is a Hackathon?</div>
-                <div className = "answer">yes</div>
+            <div className = "question">What is a Hackathon?</div>
+                <div className = "answer">
+                    This hackathon is a 24 hour event in which
+                    you get the oppurtunity to work as a team to bring your ideas to life.
+                    At the 2025 BGSU Hackathon you can choose either one or a combination 
+                    of tracks to follow that will empower you to create the best application
+                    you can.
+                </div>
             </div>
             <div className = "faqs-item"> 
-                <div className = "question">Where is the event being held?</div>
-                <div className = "answer">yes</div>
+            <div className = "question">Where is the event being held?</div>
+                <div className = "answer">
+                The event is being held on BGSUs campus, with side events taking place 
+                in <a href = "https://events.bgsu.edu/hayes_hall" target = "_blank">Hayes Hall</a> throughout 
+                the day.</div>
             </div>
             <div className = "faqs-item"> 
-                <div className = "question">Are beginners allowed?</div>
-                <div className = "answer">yes</div>
+            <div className = "question">Are beginners allowed?</div>
+                <div className = "answer">We encourage beginners to join, and even have rewards
+                    for beginners. If you are a hackathon veteran or this is your first one,
+                    this event will have something for you.
+                </div>
             </div>
         </div>
     );
