@@ -1,42 +1,418 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+    font-family: sans-serif;
+    font-size: 5.5vw;
+    font-style: normal;
+    --main-color: #FCEACC;
+    --secondary-color: #4D3A26;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    width: 100%;
+
+}
+
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+}
+
+body { 
+    padding: 0px; 
+    margin: 0px; 
+};
+
+section {
+    padding: 0px;
+    margin: 0px;
+}
+
+.initial-page {
+    background: linear-gradient(to top right, var(--secondary-color), black); 
+}
+
+
+.navbar {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .navbar {
+        top: 0px;
+        left: 0px;
+        height: 4vh;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0;
+        padding: 1vw;
+        gap: 0vw;
+        background-color: none;
+    }
+
+}
+
+.navbar-menu {
+    background-color: none;
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0vw;
+}
+
+.navelement {
+    padding-left: 2vw;
+    justify-content: center;
+    text-align: center;
+    font-size: 24px;
+    color: var(--main-color);
+    background: none;
+    position: relative;
+}
+
+.navelement:hover {
+    background-color: transparent;
+}
+
+.navelement a::after {
+
+    content: "";
+    display: inline-block;
+    background: var(--main-color);
+    height: .3vmin;
+    border-radius: 100px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.2s ease-out;
+}
+
+.navelement a:hover::after {
+
+    content: "";
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+
+.navelement a {
+    color: var(--main-color);
+    align-self: center;
+    position: relative;
+}
+
+.navelement a:visited {
+    color: var(--main-color);
+}
+
+.navelement a:focus {
+  outline: none;
+  color: none;
+}
+
+.front {
+    margin: 0px;
+    padding-top: 0vmin;
+    padding-bottom: 0vmin;
+    display: flex;
+    flex-direction: column;
+    height: 94vh; 
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+@media only screen and (max-width: 768px) {
+    .front {
+        height: 100vh;
+    }
+}
+
+.details { 
+    color: var(--secondary-color);
+}
+
+.title {
+    color: var(--main-color);
+    font-size: 4vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 80%;
+    padding: 0vw;
+    margin: 0vw;
+}
+
+.title h2 {
+    align-self: flex-start;
+    padding: 0px;
+    margin: 0px;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+    position: relative;
+    padding-bottom: 0px;
+    max-width: 100%;
+    width: min(120vmin);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.countdown {
+    padding: auto;
+    bottom: 0vmin;
+    align-self: center;
+    max-width: 100%;
+    font-size: min(14vw, 14vmin); 
+    color: var(--main-color); 
+    position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+
+
+.details {
+    background: linear-gradient(to bottom right, var(--main-color), white);
 }
 
-.card {
-  padding: 2em;
+.about-section {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    width: 100%;
+    padding: 2vw;
+   
 }
 
-.read-the-docs {
-  color: #888;
+
+@media only screen and (max-width: 768px) {
+    .about-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0px;
+        padding: 2vw;
+    }
+}
+
+.about-details {
+    position: relative;
+    margin-top: 6vmin; 
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    min-width: 40vw;
+    height: 40%;
+
+
+}
+
+.about-details h2 {
+    font-size: 3vw;
+    align-self: start;
+    padding: 0px;
+    margin: 0px;
+    text-align: left;
+}
+
+.about-details p {
+    font-size: 1.6vw;
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+}
+
+.about-numbers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4vw;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    
+}
+
+.about-number {
+    padding: 2vw;
+    margin: 0vw;
+    max-width: 30%;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .about-number {
+        text-shadow: 1px 1px black;
+    }
+}
+
+
+.about-number:nth-child(1) {
+    animation: float-up 3s ease-in-out infinite;
+}
+
+.about-number:nth-child(2) {
+    animation: float-down 2.5s ease-in-out infinite;
+}
+.about-number:nth-child(3) {
+    animation: float-up 4s ease-in-out infinite;
+}
+.about-number:nth-child(4) {
+    animation: float-down 3.5s ease-in-out infinite;
+}
+.about-number:nth-child(5) {
+    animation: float-up 4.5s ease-in-out infinite;
+}
+
+@keyframes float-up {
+    0% {
+        transform: translateY(.1vw);
+    }
+    50% {
+        transform: translateY(-.5vw);
+    }
+    100% {
+        transform: translateY(.1vw);
+    }
+}
+
+@keyframes float-down {
+    0% {
+        transform: translateY(-.1vw);
+    }
+    50% {
+        transform: translateY(.5vw);
+    }
+    100% {
+        transform: translateY(-.1vw);
+    }
+}
+
+
+.about-value {
+    font-size: 5vw;
+}
+
+.about-name {
+    font-size: 2vw;
+}
+
+.tracks-title {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    overflow: hidden; /* Prevent the bar from overflowing */
+}
+
+.tracks-title::after {
+    content: "";
+    display: inline-block;
+    background: var(--secondary-color); /* Adjust to your color */
+    height: 1vmin;
+    border-radius: 100px;
+    width: 0; /* Initially set the width to 0 */
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Start from the middle */
+    transform: translateX(-50%); /* Center it horizontally */
+    transition: width 0.8s ease-out; /* Smooth expansion */
+}
+
+.tracks-title.in-view::after {
+    width: 100%; /* Expand to full width */
+}
+
+
+.tracks {
+    gap: 4vw;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 12vh;
+}
+
+.track {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 4vmin; 
+    width: 400px;
+}
+
+.track img {
+    align-self: center;
+    width: 200px;
+}
+
+
+.faq-title {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    overflow: hidden; /* Prevent the bar from overflowing */
+}
+
+.faq-title::after {
+    content: "";
+    display: inline-block;
+    background: var(--secondary-color); /* Adjust to your color */
+    height: 1vmin;
+    border-radius: 100px;
+    width: 0px; /* Initially set the width to 0 */
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Start from the middle */
+    transform: translateX(-50%); /* Center it horizontally */
+    transition: width 0.8s ease-out; /* Smooth expansion */
+}
+
+.faq-title.in-view::after {
+    width: 100%; /* Expand to full width */
+}
+
+.faqs {
+    display: flex;
+    flex-direction: column;
+}
+
+.faqs-item {
+    margin-left: 24vw;
+    margin-bottom: 0px;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+
+.question {
+    position: relative;
+    font-size: 2vmin;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.question::after {
+    content: "";
+    display: inline-block;
+    background: var(--secondary-color); /* Adjust to your color */
+    height: 1.5vmin;
+    border-radius: 1.5vmin;
+
+    width: 1.5vmin; /* Initially set the width to 0 */
+    position: absolute;
+    bottom: .5vmin;
+    left: -2vmin; /* Start from the middle */
+}
+
+.answer {
+
+    align-self: flex-start;
+    font-size: 1.5vmin;
 }
