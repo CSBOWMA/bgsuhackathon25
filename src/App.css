@@ -397,6 +397,7 @@ a:focus {
     font-size: 2vw;
     font-weight: bold;
     align-self: flex-start;
+    cursor: pointer;
 }
 
 .question::after {
@@ -409,7 +410,7 @@ a:focus {
     width: 1vw; /* Initially set the width to 0 */
     position: absolute;
     bottom: .8vw;
-    left: -1.2vw; /* Start from the middle */
+    left: -1.5vw; /* Start from the middle */
 }
 
 .answer {
@@ -418,8 +419,8 @@ a:focus {
     text-align: left;
     font-size: 1.5vw;
     width: 60%;
-    
 }
+
 
 .answer a {
     color: var(--secondary-color);
