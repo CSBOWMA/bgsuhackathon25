@@ -10,7 +10,7 @@ function NavBar() {
       <nav className = "navbar">
             <ul className  = "navbar-menu">
             <NavElement title = "BGSU" target = "_blank" link = "https://www.bgsu.edu/" />
-            <NavElement title = "Sign-Up" target = "_blank" link = "https://forms.office.com/r/A5c6H9YShw" />
+            <NavElement title = "Register" target = "_blank" link = "https://forms.office.com/r/A5c6H9YShw" />
             <NavElement title = "About" link = "#about" target = "_self" />
             <NavElement title = "Tracks" link = "#tracks" target = "_self" />
             <NavElement title = "FAQ" link = "#faq" target = "_self" />
@@ -48,6 +48,7 @@ function TopSection() {
                 <h2>April 5-6, 2025</h2>
             </div>
             <CountdownTimer targetTime = {launchTime}  />
+            <a href = "https://forms.office.com/r/A5c6H9YShw" target = "_blank" className = "register">Register</a>
         </div>
         </section>
 
