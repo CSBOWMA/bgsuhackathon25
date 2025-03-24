@@ -129,9 +129,26 @@ a:focus {
     align-items: center;
     justify-content: space-evenly;
 }
+
+.front a {
+    display: none;
+}
 @media only screen and (max-width: 768px) {
     .front {
         height: 100vh;
+    }
+
+    .front a {
+        display: flex;
+    }
+
+    .front a::after {
+        font-size: 24vw;
+        content: "";
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
     }
 }
 
