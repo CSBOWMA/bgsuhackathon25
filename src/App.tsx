@@ -293,6 +293,7 @@ function FAQs() {
             <FAQ question = "Where is the event being held?" answer = "Starting at 10 am April 5th, The event is being held on BGSU's campus in Hayes Hall." />
             <FAQ question = "Are beginners allowed?" answer = "We encourage beginners to join, and even have rewards for beginners. If you are a hackathon veteran or this is your first one, this event will have something for you." />
             <FAQ question = "Are sleeping arrangements provided?" answer = "Sleeping arrangements will not be provided for the participants, individuals will be expected to leave the venue if they want to sleep." />
+            <FAQ question = "Will food be provided?" answer = "Food will be provided at the event, but you are welcome to bring your own." />
         </div>
     );
 }
