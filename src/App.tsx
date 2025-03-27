@@ -127,10 +127,10 @@ function AboutNumbers() {
     return (
         <div className = "about-numbers">
             <AboutNumber value = "24" name = "Hours" />
-            <AboutNumber value = "30" name = "Hackers" />
+            <AboutNumber value = "50" name = "Hackers" />
             <AboutNumber value = "3" name = "Universities" />
-            <AboutNumber value = "10" name = "Projects" />
-            <AboutNumber value = "$300" name = "Prizes" /> 
+            <AboutNumber value = "15" name = "Projects" />
+            <AboutNumber value = "$1600" name = "Prizes" /> 
         </div>
     );
 }
