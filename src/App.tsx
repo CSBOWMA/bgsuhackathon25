@@ -14,7 +14,7 @@ function NavBar() {
             <NavElement title = "About" link = "#about" target = "_self" />
             <NavElement title = "Tracks" link = "#tracks" target = "_self" />
             <NavElement title = "FAQ" link = "#faq" target = "_self" />
-            <NavElement title = "Resources" target = "_blank" link = "https://talonhacksresources.s3.us-east-2.amazonaws.com/resources.pdf" />
+            <NavElement title = "Resources" target = "_blank" link = "/resources" />
             </ul>
       </nav>
     );
