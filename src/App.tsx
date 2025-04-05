@@ -10,7 +10,6 @@ function NavBar() {
       <nav className = "navbar">
             <ul className  = "navbar-menu">
             <NavElement title = "BGSU" target = "_blank" link = "https://www.bgsu.edu/" />
-            <NavElement title = "Register" target = "_blank" link = "https://forms.office.com/r/A5c6H9YShw" />
             <NavElement title = "About" link = "#about" target = "_self" />
             <NavElement title = "Tracks" link = "#tracks" target = "_self" />
             <NavElement title = "FAQ" link = "#faq" target = "_self" />
@@ -271,25 +270,11 @@ function FAQSection() {
 
 function FAQs() {
 
-    const [isVisible, setIsVisible] = useState(false);
-
-    const handleClick = () => {
-        setIsVisible(!isVisible);
-    };
 
     return (
         <div className = "faqs">
             <FAQ question = "Who can sign up?" 
                 answer = "We are currently accepting university students from Northwest Ohio. If you fit the criteria feel free to sign up!" />
-            <div className = "faqs-item" onClick = {handleClick}> 
-                <div className = "question">How do I sign up?</div>
-                {isVisible ?
-                <div className = "answer">
-                    If you are interested in participating
-                    in this year's hackathon please fill out 
-                    this <a href = "https://forms.office.com/r/A5c6H9YShw" target = "_blank">interest form</a>.
-                </div> : null }
-            </div>
             <FAQ question = "What is a hackathon?" answer = "A hackathon is an event in which you get the opportunity to bring your ideas to life. At the BGSU Hackathon you have 24 hours to design and create your idea utilizing either one or a combination of tracks that are designed to empower you." />
             <FAQ question = "Where is the event being held?" answer = "Starting at 10 am April 5th, The event is being held on BGSU's campus in Hayes Hall." />
             <FAQ question = "Are beginners allowed?" answer = "We encourage beginners to join, and even have rewards for beginners. If you are a hackathon veteran or this is your first one, this event will have something for you." />
