@@ -37,8 +37,6 @@ const NavElement: React.FC<NavElementProps> = ({title, target = "_blank", link})
 
 function TopSection() {
 
-    const launchTime: number = new Date(2025, 3, 5, 10).getTime();
-
     return (
         
         <section id = 'topsection'>
@@ -47,7 +45,6 @@ function TopSection() {
                 <img src = {BGLogo} alt = "hackathon logo" className = 'logo'/>
                 <h2>April 5-6, 2025</h2>
             </div>
-            <CountdownTimer targetTime = {launchTime}  />
             <a href = "https://forms.office.com/r/A5c6H9YShw" target = "_blank" className = "register">Register</a>
         </div>
         </section>
