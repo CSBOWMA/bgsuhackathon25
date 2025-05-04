@@ -53,52 +53,6 @@ function TopSection() {
 
 }
 
-
-interface CountdownTimerProps {
-    targetTime: number; // The target time in milliseconds
-}
-
-const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetTime }) => {
-    // State to hold the remaining time (in milliseconds)
-    const [timeLeft, setTimeLeft] = useState<number>(targetTime - Date.now());
-
-    useEffect(() => {
-        // Update the countdown every second
-        const interval = setInterval(() => {
-            const remainingTime = targetTime - Date.now();
-            setTimeLeft(remainingTime);
-
-            // Stop the countdown when the time reaches 0
-            if (remainingTime <= 0) {
-                clearInterval(interval);
-                setTimeLeft(0); // Ensure we set it exactly to 0 when the time is up
-            }
-        }, 1000);
-
-        // Clean up the interval on component unmount
-        return () => clearInterval(interval);
-    }, [targetTime]);
-
-    // Calculate days, hours, minutes, seconds from timeLeft
-    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-    // Format the countdown
-    return (
-        <div className = 'countdown'>
-        <span>{days}:</span>
-        <span>{hours.toString().padStart(2, '0')}:</span>
-        <span>{minutes.toString().padStart(2, '0')}:</span>
-        <span>{seconds.toString().padStart(2, '0')}</span>
-        </div>
-    );
-};
-
-
-
-
 function AboutSection() {
     
     return (
@@ -146,7 +100,6 @@ const AboutNumber: React.FC<AboutNumbersProps> = ({value, name}) => {
     );
 }
 
-
 function TracksSection() {
 
    const [isInView, setIsInView] = useState(false);
@@ -181,8 +134,6 @@ function TracksSection() {
             }
         };
     }, []);
-
-
 
     return (
         <section id = "tracks">
@@ -266,8 +217,6 @@ function FAQSection() {
 }
 
 function FAQs() {
-
-
     return (
         <div className = "faqs">
             <FAQ question = "Who can sign up?" 
@@ -284,8 +233,8 @@ function FAQs() {
 interface FAQProps {
     question: string;
     answer: string;
-
 }
+
 const FAQ: React.FC<FAQProps> = ({question, answer}) => {
     
     const [isVisible, setIsVisible] = useState(false);
@@ -302,8 +251,6 @@ const FAQ: React.FC<FAQProps> = ({question, answer}) => {
         </div>
     );
 }
-
-
 
 function App() {
     return (
